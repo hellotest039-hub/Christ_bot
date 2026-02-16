@@ -6,7 +6,7 @@ sys.path.append(BASE_DIR)
 sys.path.append(os.path.join(BASE_DIR, "ai"))
 sys.path.append(os.path.join(BASE_DIR, "scraper"))
 
-from ai_models import StatsAI, FormAI, MarketAI
+from ai_models import StatsAI, FormAI,
 from ai_combinator import AICombinator
 from real_matches import get_real_matches
 from fifa_virtual_matches import get_fifa_virtual_matches
@@ -14,7 +14,7 @@ from fifa_virtual_matches import get_fifa_virtual_matches
 app = Flask(__name__)
 app.secret_key = "christustips"
 
-ais = [StatsAI(), FormAI(), MarketAI()]
+ais = [StatsAI(), FormAI()]
 combinator = AICombinator()
 
 @app.route("/")
